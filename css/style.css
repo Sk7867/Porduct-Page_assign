@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fefcfc;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image_container {
+  width: 98%;
+  margin: 60px auto 20px;
+  height: 420px;
+}
+
+.image {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.image ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  height: 350px;
+  width: 100%;
+}
+
+.image ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.image ul li:first-child {
+  opacity: 1;
+}
+
+.image ul li:target {
+  opacity: 1;
+}
+
+.image ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.next,
+.prev {
+  text-decoration: none;
+  display: inline-block;
+  width: 20px;
+  border-radius: 50%;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  opacity: 0;
+  transition: left linear 0.4s, right linear 0.4s, opacity 0.4s ease-in-out;
+}
+
+.prev {
+  left: -40px;
+}
+.next {
+  right: -40px;
+}
+
+.image:hover .prev {
+  left: 10px;
+  opacity: 1;
+}
+
+.image:hover .next {
+  right: 15px;
+  opacity: 1;
+}
+
+.fa-chevron-circle-left,
+.fa-chevron-circle-right {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.slides {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+.slides a {
+  height: 60px;
+}
+
+.slides a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.heading {
+  font-weight: bold;
+  margin: 20px 0;
+  font-family: 'Playfair Display ';
+}
+
+.subheading {
+  font-family: 'Open Sans', sans-serif;
+  margin: 15px 0;
+}
+
+.details {
+  width: 50ch;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.fa-star {
+  color: #00d19b;
+  margin: 5px 0;
+}
+
+.rating {
+  margin: 10px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.rating-no {
+  color: #00d19b;
+}
+
+.review-btn {
+  color: rgb(0, 0, 0);
+  display: block;
+  margin: 25px 0;
+}
+
+.price {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 30px 0 40px 0;
+}
+
+.delivery {
+  margin: 5px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button {
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+  width: 150px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.wishlist {
+  width: 200px;
+}
+
+button:hover {
+  background-color: rgb(30, 30, 30);
+  color: #ffffff;
+}
+
+.footer {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  margin: 60px 40px;
+  grid-gap: 20px;
+  width: 60%;
+}
+
+.fa-truck {
+  color: #000000;
+  margin: 0 10px;
+}
+
+.fa-wallet {
+  color: #000000;
+  margin: 0 10px;
+}
+
+.fa-box {
+  color: #000000;
+  margin: 0 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.secure,
+.truck,
+.return {
+  display: flex;
+}
+.service {
+  font-size: 17px;
+}
+
+.service-descri {
+  font-size: 13px;
+  width: 22ch;
+  margin: 10px 0;
+}
+@media all and (min-width: 1000px) {
+  .container {
+    width: 90%;
+    margin: 20px auto 20px;
+    flex-direction: row;
+  }
+
+  .image_container {
+    width: 42%;
+    margin: 45px auto 20px;
+    height: 75%;
+  }
+
+  .text-container {
+    margin: 45px 20px 45px 0;
+    width: 40%;
+  }
+
+  .heading {
+    margin: 15px 0 15px 0;
+    font-size: 35px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  .details {
+    margin: 15px 0;
+    font-size: 15px;
+  }
+
+  .fa-star {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .rating {
+    margin: 8px 0;
+    font-size: 15px;
+  }
+
+  .review-btn {
+    margin: 20px 0;
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 35px;
+    margin: 25px 0 35px 0;
+  }
+
+  .delivery {
+    font-size: 12px;
+  }
+
+  .slides {
+    grid-gap: 10px;
+  }
+
+  .slides a {
+    height: 100px;
+  }
+
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 40px 180px 10px;
+    grid-gap: 20px;
+    width: 75%;
+  }
+}
